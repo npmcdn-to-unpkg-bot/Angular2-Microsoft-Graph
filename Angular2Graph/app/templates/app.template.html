@@ -1,0 +1,10 @@
+﻿
+<div id="appContenido" style="display: none">
+    <button [hidden]="logeado" (click)="login()">Iniciar sesión</button>
+
+    <div *ngIf="logeado">
+        <h1> Iniciada sesión como {{userData.displayName}}</h1>
+        <h2>Mail: {{userData.mail}}</h2>
+        <button (click)="logout()">Desconectar</button>
+    </div>
+</div>

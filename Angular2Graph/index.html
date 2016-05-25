@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <!-- Pure CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+    <!-- Angular -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/angular2@2.0.0-beta.17/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.17/angular2-polyfills.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/tools/system.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/typescript@1.8.9/lib/typescript.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.17/Rx.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.17/angular2.dev.js"></script>
+
+    <!-- Angular Http library -->
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.17/http.dev.js"></script>
+
+    <!-- Configuración y variables globales -->
+    <script type="text/javascript" src="/app/app.config.js"></script>
+
+    <script type="text/javascript">
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: {
+                emitDecoratorMetadata: true
+            },
+            map: {
+                app: BASE_URL
+            },
+            packages: {
+                app: {
+                    main: 'main',
+                    defaultExtension: 'ts'
+                }
+            }
+        });
+        System.import('app').catch(console.error.bind(console));
+    </script>
+</head>
+<body>
+    <div style="padding: 40px">
+        <h1> Angular 2 - Microsoft Graph </h1><br /><br />
+        <h2 id="cargando">Cargando...</h2>
+        <app></app>
+    </div>
+</body>
+</html>
